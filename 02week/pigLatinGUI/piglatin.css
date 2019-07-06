@@ -1,143 +1,338 @@
 body {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 20% 60% 20%;
-	width: 100%;
-	height: 150vh;
-	margin: 0;
-	padding: 0;
+    grid-template-rows: 20% 60% 20%;
+    width: 100%;
+    height: 150vh;
+    margin:0;
+    padding: 0;
+    background-image: linear-gradient( #966d49, #c3604c, #b09077);
 }
 
-header > h1 {
-	font-family: "Gloria Hallelujah", cursive;
-	font-size: 45px;
-	color: black;
+
+
+
+
+header>h1{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 45px;
+    color:black;
+    
+   
 }
 
-header > h2 {
-	font-family: "Gloria Hallelujah", cursive;
-	font-size: 30px;
-	color: black;
+header>h2{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 30px;
+    color:black;
 }
 
-header {
-	display: flex;
-	grid-column: 1/1;
-	grid-row: 1/2;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	background-color: #966d49;
+
+header{
+    display:flex;
+    grid-column: 1/1;
+    grid-row: 1/2;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+   
+    
 }
 
-.middle {
-	display: flex;
-	grid-column: 1/1;
-	grid-row: 2/3;
-	background-color: #c3604c;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-around;
+
+.middle{
+    display:flex;
+    grid-column: 1/1;
+    grid-row: 2/3;
+   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-form {
-	font-size: 40px;
-	font-family: "Gloria Hallelujah", cursive;
-	position: relative;
+form{
+    font-size:40px;
+    font-family: 'Gloria Hallelujah', cursive;
+    position: relative;
+    
 }
-input {
-	height: 100px;
-	width: 800px;
+input{
+    height:85px;
+    Width:800px;
+    border-radius: 10px;
+
 }
-input[type="text"] {
-	font-size: 35px;
-	font-family: "Gloria Hallelujah", cursive;
-	text-align: center;
+input[type="text"]
+{
+    font-size:35px;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
 }
-button {
-	height: 50px;
-	width: 200px;
-	font-family: "Gloria Hallelujah", cursive;
-	font-size: 15px;
-	background-color: ;
+button{
+  height:50px;
+    Width:200px;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:15px;
+    background-color:;
+    border-radius: 10px;
 }
-.foot {
-	display: flex;
-	grid-column: 1/1;
-	grid-row: 3/4;
-	background-color: #b09077;
-	justify-content: center;
-	align-items: center;
-	justify-content: space-evenly;
+.foot{
+    display:flex;
+    grid-column: 1/1;
+    grid-row: 3/4;
+    justify-content: center;
+    align-items: center;
+  justify-content: space-evenly;
+
 }
-.foot1:hover {
-	color: pink;
+.foot1:hover{
+  color:pink;
 }
 
-.foot2:hover {
-	color: pink;
+.foot2:hover{
+  color:pink;
 }
 
-.foot3:hover {
-	color: pink;
+.foot3:hover{
+  color:pink;
 }
 
-.foot4:hover {
-	color: pink;
+.foot4:hover{
+  color:pink;
 }
 
-span {
-	position: relative;
-	left: 215px;
+
+span{
+    position:relative;
+    left:215px;
 }
+
 
 .flip-card {
-	background-color: transparent;
-	width: 500px;
-	height: 200px;
+    background-color: transparent;
+    width: 500px;
+    height: 200px;
+    
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 
-	perspective: 1000px;
-}
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #604330;
+    color: black;
+    font-size:20px;
+    font-family: 'Gloria Hallelujah', cursive;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+   
+    border-radius: 10px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #cc9076;
+    color: black;
+    transform: rotateY(180deg);
+    font-size:40px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    border-radius: 10px;
 
-.flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-}
+  }
 
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-}
+  
 
-.flip-card-front,
-.flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-}
+  @media (max-width: 575.98px){
 
-.flip-card-front {
-	background-color: #604330;
-	color: black;
-	font-size: 20px;
-	font-family: "Gloria Hallelujah", cursive;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.flip-card-back {
-	background-color: #cc9076;
-	color: black;
-	transform: rotateY(180deg);
-	font-size: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: "Gloria Hallelujah", cursive;
-}
+ 
+  
+  
+  
+  
+  header>h1{
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size: 45px;
+      color:black;
+      
+     
+  }
+  
+  header>h2{
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size: 30px;
+      color:black;
+  }
+  
+  
+  header{
+      display:flex;
+      grid-column: 1/1;
+      grid-row: 1/2;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #966d49;
+     
+      
+  }
+  
+  
+  .middle{
+      display:flex;
+      grid-column: 1/1;
+      grid-row: 2/3;
+      background-color: #c3604c;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+  
+  form{
+      font-size:40px;
+      font-family: 'Gloria Hallelujah', cursive;
+      position: relative;
+      
+  }
+  input{
+      height:80px;
+      Width:300px;
+  
+  }
+  input[type="text"]
+  {
+      font-size:35px;
+      font-family: 'Gloria Hallelujah', cursive;
+      text-align: center;
+  }
+  button{
+    height:50px;
+      Width:200px;
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size:15px;
+      background-color:
+  }
+  .foot{
+      display:flex;
+      grid-column: 1/1;
+      grid-row: 3/4;
+      background-color: #b09077;
+      justify-content: center;
+      align-items: center;
+    justify-content: space-evenly;
+  
+  }
+  .foot1{
+  
+  }
+  
+  .foot2{
+    display:none;
+    
+  }
+  
+  .foot3:hover{
+   
+  }
+  
+  .foot4{
+    display:none;
+  }
+  
+  
+  span{
+      position:relative;
+      left:215px;
+  }
+  
+  
+  .flip-card {
+      background-color: transparent;
+      width: 275px;
+      height: 200px;
+    
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+    
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      
+    }
+    
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+      
+    }
+    
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      
+  
+    }
+    
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      background-color: #604330;
+      color: black;
+      font-size:20px;
+      font-family: 'Gloria Hallelujah', cursive;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+     
+    }
+    
+    /* Style the back side */
+    .flip-card-back {
+      background-color: #cc9076;
+      color: black;
+      transform: rotateY(180deg);
+      font-size:40px;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      font-family: 'Gloria Hallelujah', cursive;
+  
+    }
+  
+  }
