@@ -20,10 +20,12 @@ function printStacks() {
 }
 
 function movePiece(startStack, endStack) {
+	// This moves the pieces from one stack to another, this function was the easiest part for me.
 	stacks[endStack].push(stacks[startStack].pop());
 }
 
 function isLegal(startStack, endStack) {
+	//legal moves took the longest for me to understand this alot of googling hack overflow and stack overflow
 	if (
 		stacks[startStack][stacks[startStack].length - 1] === undefined &&
 		stacks[startStack][stacks[endStack].length - 1] === undefined
@@ -36,12 +38,14 @@ function isLegal(startStack, endStack) {
 	) {
 		return true;
 	} else {
+		//illegal moves if does not equal above if statements
 		console.log("Invalid move");
 		return false;
 	}
 }
 
 function checkForWin() {
+	//checks for win the second easiest for to me figure it out while writing.
 	if (stacks.b.length === 4) {
 		return true;
 	} else {
@@ -50,6 +54,7 @@ function checkForWin() {
 }
 
 function towersOfHanoi(startStack, endStack) {
+	// Runs and ends the game. Also removing spacing and capitol letters.
 	let newStart = startStack.toLowerCase().trim();
 	let newEnd = endStack.toLowerCase().trim();
 	if (isLegal(startStack, endStack)) {
