@@ -28,16 +28,43 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function generateHint() {
+function generateHint(guess) {
+	// Create variables solutionArray and guessArray that each split up passed in arguments, .splitting on ''(empty string).
 	let solutionArray = solution.split("");
-	let guessArray = solution.split("");
+	let guessArray = guess.split("");
 	let correctLetterLocations = 0;
+	let correctLetters = 0;
+
+	for (var i = 0; i < solutionArray.length; i++) {
+		if (solutionArray[i] == guessArray[i]) {
+			correctLetterLocations += 1;
+			solutionArray[i] = null;
+		}
+	}
+
+	for (var i = 0; i < solutionArray.length; i++) {
+		let targetIndex = solutionArray.indexOf(guessArray[i]);
+		if (targetIndex > -1) {
+			correctLetters++;
+			solutionArray[targetIndex] = null;
+		}
+	}
+	return `${correctLetterLocations}-${correctLetters}`;
 }
 
 function mastermind(guess) {
-	solution = "abcd"; // Comment this out to generate a random solution//could be function validinput
-	let isvalid = true;
-	if (!guessArr.includes(letters)) isvalid = false;
+	solution = "abcd"; // Comment this out to generate a random solution
+	// your code here
+	if (guess === solution) {
+		console.log("You guessed it!");
+		return "You guessed it!";
+	} else {
+		const hint = generateHint(guess);
+		board.push(`${guess}-${hint}`);
+		console.log("Try again");
+		return "Try again";
+	}
+	userPlays++;
 }
 
 function getPrompt() {
