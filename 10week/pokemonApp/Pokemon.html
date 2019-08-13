@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="./pokemon.css" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Cinzel|Gloria+Hallelujah|Modak|Shadows+Into+Light"
+    rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Signika&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<!-- <body onload="window.alert('Welcome to Pokemon!');"> -->
+<body>
+
+<button id='btn' type="button"> Remove Pokemon :) </button>
+<button id='btn1' type="button">Shuffle</button>
+<button onclick = "fight()">Fight!</button>
+
+
+
+
+
+
+<div id="header"></div>
+
+<div class= "characterbox">
+<div class= "characterSelect">
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src="./images/pokemonimages/Pokeball.svg"
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon1();getPokemonpic1()" class="flip-card-back"><img 
+src="./images/pokemonimages/Bulbasaur.svg" 
+height="87px"
+width="100px" />
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon2();getPokemonpic2()" class="flip-card-back"><img 
+src="./images/pokemonimages/charizard.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon3();getPokemonpic3()" class="flip-card-back"><img 
+src=".\images/pokemonimages/pikachu-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon4();getPokemonpic4()" class="flip-card-back"><img 
+src=".\images/pokemonimages/squirtle-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon5();getPokemonpic5()"class="flip-card-back"><img 
+src=".\images//PokemonImages/jigglypuff-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon6();getPokemonpic6()"class="flip-card-back"><img 
+src=".\images//PokemonImages/zubat-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon7();getPokemonpic7()" class="flip-card-back"><img 
+src=".\images//PokemonImages/machamp-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon8();getPokemonpic8()"class="flip-card-back"><img 
+src=".\images//PokemonImages/weepinbell-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon9();getPokemonpic9()"class="flip-card-back"><img 
+src=".\images//PokemonImages/slowpoke-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon10();getPokemonpic10()"class="flip-card-back"><img 
+src=".\images//PokemonImages/magnemite-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon11();getPokemonpic11()"class="flip-card-back"><img 
+src=".\images//PokemonImages/voltorb-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon12();getPokemonpic12()"class="flip-card-back"><img 
+src=".\images//PokemonImages/hitmonlee-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon13();getPokemonpic13()"class="flip-card-back"><img 
+src=".\images//PokemonImages/jolteon-seeklogo.com.svg"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon14();getPokemonpic14()"class="flip-card-back"><img 
+src=".\images//PokemonImages/mewtwo-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon15();getPokemonpic15()"class="flip-card-back"><img 
+src=".\images//PokemonImages/snorlax-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon16();getPokemonpic16()"class="flip-card-back"><img 
+src=".\images//PokemonImages/sandslash-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon17();getPokemonpic17()"class="flip-card-back"><img 
+src=".\images//PokemonImages/butterfree-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon18();getPokemonpic18()" class="flip-card-back"><img 
+src=".\images//PokemonImages/dragonite-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon19();getPokemonpic19()"class="flip-card-back"><img 
+src=".\images//PokemonImages/moltres-seeklogo.com.svg" 
+height="87px"
+width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front"><img 
+src=".\images/pokemonimages/Pokeball.svg" 
+height="87px"
+width="100px" />
+</div>
+<div onclick="getPokemon20();getPokemonpic20()"class="flip-card-back"><img src="..\images//PokemonImages/zapdos-seeklogo.com.svg" height="87px"width="100px" />
+<p id="output"></p>
+</div>
+</div>
+</div>
+                                                                                                                                                
+</div>
+
+<div class="battletext">
+<p id=pokemon1></p>
+<p onclick="fight()"class="fightbutton"></p>
+<p id=pokemon2></p>
+
+</div>
+
+<div class="pokepics">
+<p id=pokesprite1></p>
+<p id=Winner></p>
+<p id=Winner2></p>
+<p id=pokesprite2></p>
+
+</div>
+
+<div class = "powers">
+<p id=pwr1></p>
+<p id=pwr2></p>
+</div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./pokemon.js"></script>
+</body>
+</html>
+
+
+

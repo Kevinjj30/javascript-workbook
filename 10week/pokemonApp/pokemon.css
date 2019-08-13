@@ -1,0 +1,256 @@
+body {
+   width: 100%;
+    height: 130vh;
+    margin:0;
+    padding-bottom: 175px;
+    background-image: url("./images/pokemonimages/arena.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+  }
+
+
+#pokemon1{
+  color:white;
+  font-size:large; 
+  height:140px;
+  width:600px;
+  padding:20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin:20px;
+  border-radius: 30px;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  
+  
+ }
+
+ p{
+  font-family: 'Signika', sans-serif;
+  font-size: 15px;
+  font-style: bold;
+ }
+ 
+ h1{
+  font-family: 'Signika', sans-serif;
+  font-size: 15px;
+  font-style: bold;
+ }
+
+ li{
+  font-family: 'Signika', sans-serif;
+  font-size: 15px;
+  font-style: bold;
+ }
+ #header{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  height:15%;
+  font-family: 'Signika', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+} 
+div button {     
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;        
+}
+.characterbox{
+  display: flex;
+  height:100%;
+  width:100%;
+  flex-direction: column;
+  align-items: center;
+}
+.characterSelect{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height:30%;
+  width:90%;
+  justify-content: center;
+  align-content: center;
+ 
+}
+
+
+img{
+  height:110px;
+  width:130px;
+ 
+}
+
+.battletext{
+  display:flex;
+ 
+justify-content: space-between;
+  width:100%;
+  
+}
+
+#Winner{
+  color:white;
+  font-size: large;
+  background-color:blue;
+  height:10%;
+ 
+}
+
+#Winner2{
+  color:white;
+  font-size: large;
+  background-color:blue;
+  height:10%;
+  
+}
+
+#pokemon2{
+  color:white;
+  font-size:large; 
+  height:140px;
+  width:600px;
+  padding:20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin:20px;
+  border-radius: 30px;
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+ }
+
+
+.fightbutton{
+  height:100px;
+  background-repeat: no-repeat;
+  width:5%;
+align-self: flex-end;
+  background-image: url("./images/pokemonimages/swords.svg");
+
+}
+
+.battletext :hover{
+  color:red;
+}
+
+
+#pwr1{
+  color:transparent;
+}
+
+
+#pwr2{
+  color:transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .flip-card {
+  background-color: transparent;
+  height:117px;
+  width:130px;
+  
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  height:117px;
+  width:130px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  animation: bounce 2s;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  height:117px;
+  width:130px;
+  backface-visibility: hidden;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front :hover{
+  background-color: Transparent;
+  color: black;
+  font-size:20px;
+  font-family: 'Gloria Hallelujah', cursive;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  border-radius: 10px;
+ 
+ 
+}
+
+
+/* Style the back side */
+.flip-card-back {
+  background-color: Transparent;
+  color: black;
+  transform: rotateY(180deg);
+  font-size:40px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  border-radius: 10px;
+
+}
+
+.pokepics{
+  display:flex;
+  width:50%;
+  
+  height:25%;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flip-card:nth-of-type(1){}
+.flip-card:nth-of-type(2){}
+.flip-card:nth-of-type(3){}
+.flip-card:nth-of-type(4){}
+.flip-card:nth-of-type(5){}
+.flip-card:nth-of-type(6){}
+.flip-card:nth-of-type(7){}
+.flip-card:nth-of-type(8){}
+.flip-card:nth-of-type(9){}
+.flip-card:nth-of-type(10){}
+.flip-card:nth-of-type(11){}
+.flip-card:nth-of-type(12){}
+.flip-card:nth-of-type(13){}
+.flip-card:nth-of-type(14){}
+.flip-card:nth-of-type(15){}
+.flip-card:nth-of-type(16){}
+.flip-card:nth-of-type(17){}
+.flip-card:nth-of-type(18){}
+.flip-card:nth-of-type(19){}
+.flip-card:nth-of-type(20){}
